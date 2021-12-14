@@ -2,13 +2,16 @@
 <p>
   Start editing to see some magic happen :)
 </p> -->
-
+<h1>Angular App</h1>
+<h4>Welcome {{firstName}} {{lastName}}</h4>
 <app-view-component></app-view-component>
 
-<a routerLink="">Home</a>
-<br>
-<a routerLink="about">About</a>
-<br>
-<a routerLink="user">User</a>
+<nav>
+<ul>
+  <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+  <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+  <li><a routerLink="/user" routerLinkActive="active">User</a></li>
+</ul>
+</nav>
 
 <router-outlet></router-outlet>
