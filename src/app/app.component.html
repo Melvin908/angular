@@ -11,7 +11,43 @@
   <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
   <li><a routerLink="/about" routerLinkActive="active">About</a></li>
   <li><a routerLink="/user" routerLinkActive="active">User</a></li>
+  <li><a routerLink="/pipe" routerLinkActive="active">pipe</a></li>
 </ul>
 </nav>
 
 <router-outlet></router-outlet>
+
+<div *ngIf="showMsg" [ngStyle]='{color:"red"}'> showing this message from IF true statement</div>
+
+<br>
+<div class='panel panel-primary'>
+<div class='panel-heading'>
+    {{title}}
+</div>
+
+<div class='panel-body'>
+    <div class='table-responsive'>
+        <table class='table'>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Director</th>
+                    <th>Cast</th>
+                    <th>Release Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let movie of movies;">
+                    <td>{{movie.title}}</td>
+                    <td>{{movie.director}}</td>
+                    <td>{{movie.cast}}</td>
+                    <td>{{movie.releaseDate}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>
+
+ 
+

@@ -7,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
+  memberData=[
+    {name:'Peter', email:'peter@test.com'},
+    {name:'Sam', email:'sam@test.com'},
+    {name:'Abc', email:'abc@test.com'},
+    {name:'Tony', email:'tony@test.com'}
+  ]
+
   constructor() { }
 
   ngOnInit() {
