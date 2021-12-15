@@ -56,7 +56,5 @@ export class AppRoutingModuleModule {
     this.route.navigate(['home']);
   }
 
-  openAbout(){
-    this.route.navigate(['about']);
-  }
+
 }
