@@ -1,16 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule, Routes } from '@angular/router';
-import { AboutComponent } from '../about/about.component';
+import { Router, RouterModule, Routes } from '@angular/router';
+
 import { HomeComponent } from '../home/home.component';
 import { UserComponent } from '../user/user.component';
-import { HeroBirthday1Component } from '../hero-birthday1/hero-birthday1.component';
+import { ProductsComponent } from '../products/products.component';
+import { AddproductComponent } from '../addproduct/addproduct.component';
 
 const routes: Routes=[
-  {
-    component:AboutComponent,
-    path:'about'
-  },
+
   {
     component:HomeComponent,
     path:'home'
@@ -20,9 +18,15 @@ const routes: Routes=[
     path:'user'
   },
   {
-  path:'pipe',
-  component:HeroBirthday1Component
-  }
+    component:ProductsComponent,
+    path:'products'
+  },
+  {
+    component:AddproductComponent,
+    path:'addpro'
+  },
+
+
 ]
 
 @NgModule({
@@ -36,4 +40,18 @@ const routes: Routes=[
 
   ]
 })
-export class AppRoutingModuleModule { }
+export class AppRoutingModuleModule { 
+  constructor(private route:Router) { }
+  
+  openProducts()
+  {
+    this.route.navigate(['products']);
+  }
+  openDirective(){
+    this.route.navigate(['directive'])
+  }
+
+  openReactive(){
+    this.route.navigate(['reactive'])
+  }
+}
