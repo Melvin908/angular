@@ -25,6 +25,11 @@ const routes: Routes=[
     component:AddproductComponent,
     path:'addpro'
   },
+  {
+    path:'',
+    redirectTo:'home',
+    pathMatch:'full'
+  }
 
 
 ]
@@ -47,11 +52,11 @@ export class AppRoutingModuleModule {
   {
     this.route.navigate(['products']);
   }
-  openDirective(){
-    this.route.navigate(['directive'])
+  openHome(){
+    this.route.navigate(['home']);
   }
 
-  openReactive(){
-    this.route.navigate(['reactive'])
+  openAbout(){
+    this.route.navigate(['about']);
   }
 }

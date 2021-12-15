@@ -16,6 +16,9 @@ export class AppComponent  {
   products(){
     this.routes.openProducts();
   }
+  home(){
+    this.routes.openHome();
+  }
 }
 
 
