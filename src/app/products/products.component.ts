@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductsComponent implements OnInit {
 
+  products:any=[];
+  prodcat:string="";
+  prodname:string="";
+
   constructor() { }
+
+  addProduct(){
+    this.products.push({name:this.prodcat,doj:this.prodname})
+  }
 
   ngOnInit() {
   }

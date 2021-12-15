@@ -5,7 +5,7 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { UserComponent } from '../user/user.component';
 import { ProductsComponent } from '../products/products.component';
-import { AddproductComponent } from '../addproduct/addproduct.component';
+
 
 const routes: Routes=[
 
@@ -21,10 +21,7 @@ const routes: Routes=[
     component:ProductsComponent,
     path:'products'
   },
-  {
-    component:AddproductComponent,
-    path:'addpro'
-  },
+
   {
     path:'',
     redirectTo:'home',
